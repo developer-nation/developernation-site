@@ -22,6 +22,7 @@ export const Logo = styled.img`
 `;
 
 export const RightContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: row;
   align-self: flex-end;
@@ -39,4 +40,5 @@ export const AccountButton = styled.div`
   border-radius: 5px;
   height: fit-content;
   width: fit-content;
+  cursor: pointer;
 `;
