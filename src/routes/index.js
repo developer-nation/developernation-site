@@ -2,14 +2,18 @@ import React from 'react';
 
 import Home from '../pages/Home';
 
-import { BrowserRouter, Route } from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
+import { ConnectedRouter } from "connected-react-router";
+import { history } from "../store";
 
 const Routes = () => {
 
     return (
-        <BrowserRouter>
-            <Route exact path={"/"} component={Home}/>
-        </BrowserRouter>
+        <ConnectedRouter history={history}>
+            <Switch>
+                <Route exact path={"/"} component={Home}/>
+            </Switch>
+        </ConnectedRouter>
     )
 };
 

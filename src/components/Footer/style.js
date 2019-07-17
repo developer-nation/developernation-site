@@ -14,19 +14,20 @@ export const FooterContainer = styled.div`
 export const FooterLogoContainer = styled.div`
   display:flex;
   align-items: center;
-  margin-left: 10%;
+  margin-left: 12.5%;
 `;
 
 export const FooterLogo = styled.img`
   height: 40px;
   width: auto;
+  cursor: pointer;
 `;
 
 export const FooterSocialContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: auto;
-  margin-right: 10%;
+  margin-right: 12.5%;
 `;
 
 export const SocialIcons = styled.a`

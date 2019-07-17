@@ -19,6 +19,7 @@ export const Logo = styled.img`
   margin-bottom: 10px;
   height: fit-content;
   width: fit-content;
+  cursor: pointer;
 `;
 
 export const RightContainer = styled.div`

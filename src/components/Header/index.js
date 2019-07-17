@@ -3,12 +3,20 @@ import {AccountButton, HeaderContainer, Logo, LogoContainer, RightContainer} fro
 import { MdAccountBox } from "react-icons/md";
 import LogoFile from "../../assets/Logo.svg";
 import DiscordWidget from "../DiscordWidget";
+import { push } from 'connected-react-router';
+import { connect } from 'react-redux';
 
-const Header = () => {
+const Header = (props) => {
+
+    function handleLogoClick(){
+        const { push } = props;
+        push("/");
+    }
+
     return (
         <HeaderContainer>
             <LogoContainer>
-                <Logo src={LogoFile} alt={"Logo da comunidade"}/>
+                <Logo onClick={handleLogoClick} src={LogoFile} alt={"Logo da comunidade"}/>
             </LogoContainer>
             <RightContainer>
                 <DiscordWidget/>
@@ -18,4 +26,10 @@ const Header = () => {
     )
 };
 
-export default Header;
+const mapDispatchToProps = dispatch => {
+    return {
+        push: path => dispatch(push(path)),
+    }
+};
+
+export default connect(null, mapDispatchToProps)(Header);
